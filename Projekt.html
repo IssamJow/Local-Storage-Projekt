@@ -14,7 +14,7 @@
         <link href="../Local-Storage-Projekt/Layout.css">
         
         
-</head>
+</head> <!-- Grosse headline "Local Storage Tutorials 2- noch eine NAvi erstellen mit checksupport 3-trennungborders auf grun 4 buttons im pink-->
         <body>
             <header>
                 <div class="Th-logo">
@@ -24,12 +24,15 @@
                     <img src="../Local-Storage-Projekt/Src/assets/img/mi-box-100.png" alt="mi-box-100" width="100" height="83">
                     <h1>Medieninformatik<br>an der TH Köln</h1>
                 </div>
+                <div><h1> HTML LocalStorage Tutorials</h1></div>
                 <nav>
                     <ul id="nav">
                         <li><a href="#definition" title="Definition">LocalStorage Definition</a></li>
                         <li><a href="#local-storage-object" title="Local-Storage-Object">LocalStorage-Object</a></li>
                         <li><a href="#session-storage-object" title="Session-Storage-Object">SessionStorage-Object</a></li>
+                        <li><a href="#checkbrowsersupprt" title="BrowserSupport"> Browser Support</a></li>
                         <li><a href="#cookies" title="Cookies">Cookies</a></li>
+     
                     </ul>
                 </nav>
             </header>
@@ -64,11 +67,25 @@
                           <td>4.0</td>
                           <td>11.5</td>
 				      </tr>
+                        </tbody>
+                </table>
             
             </section>
-            <section>
+            <section id="Object-CheckSupport">
+              
+                <h2>Local Storage Objekte </h2>
+                
+                <p>HTML local storage provides two objects for storing data on the client:</p>
+        <ul id="supportbrowser">
+                <li>window.localStorage - stores data with no expiration date</li>
+                <li>window.sessionStorage - stores data for one session (data is lost when the browser tab is closed)</li>
+                </ul> 
+                <p>Before using local storage, check browser support for localStorage and sessionStorage:</p>
+                
+                
                 
                 </section>
+    <!-- auf die W3s seite CSS Code beispiel anschaun -->
             
             
         
