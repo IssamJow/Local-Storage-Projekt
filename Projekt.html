@@ -81,11 +81,91 @@
                 <li>window.sessionStorage - stores data for one session (data is lost when the browser tab is closed)</li>
                 </ul> 
                 <p>Before using local storage, check browser support for localStorage and sessionStorage:</p>
-                
-                
-                
+                <div class="code">
+                <div>   if(typeof(Storage) !== "undefined") { <br>
+                   <i>  // Code for localStorage/sessionStorage.</i> <br>
+                    } else {<br>
+                   <i>// Sorry! No Web Storage support..</i> <br>
+                    }
+                    </div>
+                </div>
                 </section>
-    <!-- auf die W3s seite CSS Code beispiel anschaun -->
+                <section id="noExpiration">
+                    <h2>The localStorage Objekt</h2>
+                        <p>The localStorage object stores the data with no expiration date. The data will not be deleted when the browser is                                closed, and will be available the next day, week, or year.</p>
+                    <div class="Exemple1">
+                        <h3>Beispiel</h3>
+                        <div class="Code store and retrieve">
+                        <i>// Store </i> <br>
+                            localStorage.setItem(<span class="HighVAL"> "studiengang"</span> , <span class="HighVAL"> "MedienInformatik"</span>);<br>
+                            <i>// Retrieve </i><br>
+                            document.getElementById(<span class="HighVAL" >"result"</span>).innerHTML = localStorage.getItem(<span                                                  class="HighVAL"> "studiengang"</span>);
+                            
+                            
+                            
+                        </div>
+                        <a target="_blank" href="www.google.de" class="margin">try it youself</a>                    
+                    </div>
+                    <p>Example explained :</p>
+                        <ul id="explain">
+                            <li>Create a localStorage name/value pair with name="lastname" and value="Smith"</li>
+                            <li>Retrieve the value of "studiengang" and insert it into the element with id="result"</li>
+                            </ul>
+                            <p>The example above could also be written like this:</p>
+                            <div id="code"><i> // Store</i><br>
+                            localStorage.studiengang = <span>"MedienInformatik</span>;<br>
+                                <i> // Retrieve</i><br>
+                                document.getElementById(<span>"result"</span>).innerHTML = localStorage.studiengang;
+                            </div>
+                            <div id="remove">
+                                <p> The syntax for removing the "studiengang" localStorage item is as follows:</p>
+                                <div id="code">localStorage.removeItem(<span>"studiengang"</span>);
+                                </div>
+                            </div>
+                    <p><strong>Note</strong>Name/value pairs are always stored as strings. Remember to convert them to another format when                              needed!</p>
+                    <p>The following example counts the number of times a user has clicked a button. In this code the value string is converted                             to a number to be able to increase the counter:    
+                    </p>
+                    <div class="Exemple2">
+                        <h3>Beispiel</h3>
+                        <div class="code count">
+                            <span class="anw">    if </span> (localStorage.clickcount) { <br>
+                                    localStorage.clickcount = Number(localStorage.clickcount) +  <span class="HighVAL">1</span>;<br>
+                                    }<span class="anw">  else </span> {<br>
+                                localStorage.clickcount = <span class="HighVAL">1</span>;<br>
+                                    }<br>
+                                document.getElementById(<span class="HighVAL">"result"</span>).innerHTML = <span class="HighVAL">"You have                                          clicked the button " </span>+ <br>
+                            localStorage.clickcount +<span class="HighVAL">" time(s)."</span>;
+                        </div>
+                          <a target="_blank" href="www.google.de" class="margin">try it youself</a>  
+                    </div>    
+            </section>
+            <section id="SessionStorage">
+                <h2>The sessionStorage Objekt</h2>
+                <p>The sessionStorage object is equal to the localStorage object, except that it stores the data for only one session. The data                         is deleted when the user closes the specific browser tab.</p>
+                <p>The following example counts the number of times a user has clicked a button, in the current session:
+                            </p>
+                <div class="Exemple3">
+                <h3>Beispiel</h3>
+                    <div class="code count">
+                    <span class="anw">    if </span> (sessionStorage.clickcount) { <br>
+                                    sessionStorage.clickcount = Number(sessionStorage.clickcount) +  <span class="HighVAL">1</span>;<br>
+                                    }<span class="anw">  else </span> {<br>
+                                sessionStorage.clickcount = <span class="HighVAL">1</span>;<br>
+                                    }<br>
+                                document.getElementById(<span class="HighVAL">"result"</span>).innerHTML = <span class="HighVAL">"You have                                          clicked the button " </span>+ <br>
+                            sessionStorage.clickcount +<span class="HighVAL">" time(s) in this Session."</span>;
+                    
+                
+                </div>
+                
+                <a target="_blank" href="www.google.de" class="margin">try it youself</a> 
+            
+            </div>
+            
+            </section>
+                        
+            
+            <!-- auf die W3s seite CSS Code beispiel anschaun -->
             
             
         
