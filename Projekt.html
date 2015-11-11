@@ -11,7 +11,9 @@
 		<meta name="description" content="Projekt Local Storage">
 		<meta name="author" content="Issam Jourhbiri & Koray Güc">
        <!-- Css Datei hinzufügen --> 
-        <link href="../Local-Storage-Projekt/Layout.css">
+        
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="../Local-Storage-Projekt/Layout.css">
         
         
 </head> <!-- Grosse headline "Local Storage Tutorials 2- noch eine NAvi erstellen mit checksupport 3-trennungborders auf grun 4 buttons im pink-->
@@ -24,7 +26,7 @@
                     <img src="../Local-Storage-Projekt/Src/assets/img/mi-box-100.png" alt="mi-box-100" width="100" height="83">
                     <h1>Medieninformatik<br>an der TH Köln</h1>
                 </div>
-                <div><h1> HTML LocalStorage Tutorials</h1></div>
+                <div> HTML LocalStorage Tutorial</div>
                 <nav>
                     <ul id="nav">
                         <li><a href="#definition" title="Definition">LocalStorage Definition</a></li>
@@ -51,11 +53,11 @@
 	          <thead>
 		          <tr>
 			          <th >API</th>
-		            <th><img src="Browserimg/unnamed.png" alt="chrome" width="16%"></th>
-		            <th><img src="Browserimg/internet-explorer-10-for-windows-7-16-535x535.png" alt="IE" width="10%"></th>
-                     <th><img src="Browserimg/firefox-256.e2c1fc556816.jpg" alt="Firefox" width="18%"></th>
-                     <th><img src="Browserimg/safari-extrem-langsam_4134868a.jpg" alt="Safari" width="16%"></th>
-                      <th><img src="Browserimg/Opera-Logo-Icon.jpg" alt="Opera" width="14%"></th>
+		            <th><img src="Browserimg/unnamed.png" alt="chrome" width="25%"></th>
+		            <th><img src="Browserimg/internet-explorer-10-for-windows-7-16-535x535.png" alt="IE" width="19%"></th>
+                     <th><img src="Browserimg/firefox-256.e2c1fc556816.jpg" alt="Firefox" width="27%"></th>
+                     <th><img src="Browserimg/safari-extrem-langsam_4134868a.jpg" alt="Safari" width="25%"></th>
+                      <th><img src="Browserimg/Opera-Logo-Icon.jpg" alt="Opera" width="23%"></th>
 		          </tr>
 			      </thead>
 			      <tbody>
@@ -96,16 +98,20 @@
                     <div class="Exemple1">
                         <h3>Beispiel</h3>
                         <div class="Code store and retrieve">
-                        <i>// Store </i> <br>
+                
+                      <i>  // Store </i> <br>
                             localStorage.setItem(<span class="HighVAL"> "studiengang"</span> , <span class="HighVAL"> "MedienInformatik"</span>);<br>
-                            <i>// Retrieve </i><br>
+                            <i>  // Retrieve </i><br>
                             document.getElementById(<span class="HighVAL" >"result"</span>).innerHTML = localStorage.getItem(<span                                                  class="HighVAL"> "studiengang"</span>);
                             
                             
                             
                         </div>
-                        <a target="_blank" href="www.google.de" class="margin">try it youself</a>                    
+                     
+	              <input href="google.de"type="try" value="Try it yourself!">
+             
                     </div>
+                        
                     <p>Example explained :</p>
                         <ul id="explain">
                             <li>Create a localStorage name/value pair with name="lastname" and value="Smith"</li>
@@ -122,7 +128,7 @@
                                 <div id="code">localStorage.removeItem(<span>"studiengang"</span>);
                                 </div>
                             </div>
-                    <p><strong>Note</strong>Name/value pairs are always stored as strings. Remember to convert them to another format when                              needed!</p>
+                    <p><strong>Note:</strong>Name/value pairs are always stored as strings. Remember to convert them to another format when                              needed!</p>
                     <p>The following example counts the number of times a user has clicked a button. In this code the value string is converted                             to a number to be able to increase the counter:    
                     </p>
                     <div class="Exemple2">
@@ -136,7 +142,7 @@
                                 document.getElementById(<span class="HighVAL">"result"</span>).innerHTML = <span class="HighVAL">"You have                                          clicked the button " </span>+ <br>
                             localStorage.clickcount +<span class="HighVAL">" time(s)."</span>;
                         </div>
-                          <a target="_blank" href="www.google.de" class="margin">try it youself</a>  
+                          <input href="google.de"type="try" value="Try it yourself!"> 
                     </div>    
             </section>
             <section id="SessionStorage">
@@ -158,7 +164,7 @@
                 
                 </div>
                 
-                <a target="_blank" href="www.google.de" class="margin">try it youself</a> 
+                <input href="google.de"type="try" value="Try it yourself!">
             
             </div>
             

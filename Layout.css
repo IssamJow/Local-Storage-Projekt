@@ -1,1 +1,161 @@
-<!-- Css Code -->
+/*------------------------------------*\
+    #colors
+\*------------------------------------*/
+
+.green{		#77cc00; }
+.blue{		#4952e1; }
+.magenta{ #dd1166; }
+.purple{ 	#9313c3; }
+.black{ 	#231f20; }
+.gray{ 		#fbfbfb; }
+
+h1,h2,h3,h4{
+	font-weight: 100;
+	font-size: 1.8rem;
+	line-height: 120%;
+	margin-bottom: 1.8rem;
+}
+p {
+	margin-bottom: 2rem;
+}
+
+p + p{
+	margin-top: -1rem;
+}
+
+
+
+a:hover{
+    color: #fff;
+    text-decoration: none;
+    border-bottom: dotted 1px #dd1166;
+    background-color: #dd1166;
+}
+body {
+	font-size: 100%;
+	font-weight: 300;
+	background-color: rgba(240, 240, 240, 1);
+}
+body > header, body > main{
+	max-width: 80%;
+	margin: 0 auto 20px;
+	padding: 20px;
+	position: relative;
+	background-color: #fff;
+}
+section, table{
+	margin-bottom: 2rem;
+}
+
+section:not(:first-child){
+	border-top: solid 1px #77cc00;
+	padding-top: 2rem;
+}
+/*------------------------------------*\
+    #Header
+\*------------------------------------*/
+
+.Th-logo{
+	margin-bottom: 4rem;
+}
+
+.mi-logo{
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	text-align: center;
+}
+
+body > header h1{
+	font-size: 1rem;
+	text-align: center;
+	margin-bottom: 20px;
+}
+body > header > div:nth-child(3) {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+/*------------------------------------*\
+    #Navigation
+\*------------------------------------*/
+
+
+#nav > li{
+	display: block;
+	margin-bottom: 0.5rem;
+}
+
+#nav > li +li{
+	border-top: solid 1px #dd1166;
+	padding-top: 0.5rem;
+}
+
+#nav > li a{
+	color: #000;
+	font-weight: 600;
+	text-decoration: none;
+	border: none;
+	display: block;
+}
+
+#nav > li a:hover{
+	color: #dd1166;
+	background-color: inherit;
+}
+/*------------------------------------*\
+    #Tables
+\*------------------------------------*/
+
+table{
+	width: 100%;
+}
+
+table thead th{
+	font-weight: 400;
+	text-align: left;
+	padding-bottom: 0.5rem;
+	border-bottom: solid 1px #ddd;
+}
+
+table tr:not(:last-child){
+	border-bottom: solid 1px #ddd;
+}
+
+table td{
+		padding: 0.5rem 0;
+}
+
+table td + td,table th + th {
+	padding-left: 0.5rem;
+}
+#Support > table > tbody > tr > td:nth-child(1) , #Support > table > thead > tr > th:nth-child(1) {
+    
+    font-weight: bold;
+}
+
+fieldset + fieldset{
+	margin-top: 1rem;
+}
+input[type=try]{
+	background-color: #fff;
+	border: 1px solid #dd1166;
+	color: #dd1166;
+	cursor: pointer;
+	font-size: 1rem;
+	padding: 0.5rem;
+    transition: background 0.2s, color 0.2s;}
+#noExpiration > div.Exemple1 > div {
+    background-color: beige;
+    
+}
+input[type=try]:hover{
+	background-color: #dd1166;
+	border: 1px solid #dd1166;
+	color: #fff;
+}
+    
+
+
+
+
