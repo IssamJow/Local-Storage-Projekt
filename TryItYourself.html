@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<header>
+     
 
+</header>
+<body>
+<head>
+    
+    <div class="Head">
+        Try it Yourself ! 
+    </div>
+</head>   
+<main>
+    <div id="Code">
+        <textarea  id="text"><!DOCTYPE html>
+            <html>
+                <body>
+
+                    <div id="result"></div>
+
+                    <script>
+                        // Check browser support
+                        if (typeof(Storage) !== "undefined") {
+                            // Store
+                            localStorage.setItem("lastname", "Smith");
+                            // Retrieve
+                            document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+                        } else {
+                            document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+                        }
+                    </script>
+
+                </body>
+            </html></textarea>
+    
+    </div>
+    <div id="result">
+        <iframe framborder="0" id="result">
+        #document
+            <!DOCTYPE html>
+            <html>
+                <body>
+
+                    <div id="result"></div>
+
+                    <script>
+                        // Check browser support
+                        if (typeof(Storage) !== "undefined") {
+                            // Store
+                            localStorage.setItem("lastname", "Smith");
+                            // Retrieve
+                            document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+                        } else {
+                            document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+                        }
+                    </script>
+
+                </body>
+            </html>
+        </iframe>
+        
+    </div>
+    
+</main>    
+<footer>
+</footer>
+   
+</body>
+</html>
