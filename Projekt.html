@@ -27,6 +27,13 @@
                     <h1>Medieninformatik<br>an der TH Köln</h1>
                 </div>
                 <div> HTML LocalStorage Tutorial</div>
+                        <p>Mit diesem Tutorial soll gezeigt werden, wie Local Storage überhaupt funktioniert und angewendet wird.</br>
+                        Außerdem werden die Varianten des Local Storage von einander unterschieden und in praktischen Beispielen demonstiert.</br>
+                    Zu guter Letzt werden die Vorteile geneüber Cookies dargestellt und gezeigt , wieso Local Storage eine bessere Anwendung für                         Webstorage ist.</p>
+                
+                
+                
+                
                 <nav>
                     <ul id="nav">
                         <li><a href="#definition" title="Definition">LocalStorage Definition</a></li>
@@ -41,14 +48,15 @@
         <main>
             <section id="Definition">
                 <h2>Local Storage Definition</h2>
-                    <p>With local storage, web applications can store data locally within the user's browser.</p>
-                    <p> Before HTML5, application data had to be stored in cookies, included in every server request. Local storage is more                                 secure, and large amounts of data can be stored locally, without affecting website performance.</p>
-                    <p> Unlike cookies, the storage limit is far larger (at least 5MB) and information is never transferred to the server.</p>
-                    <p>Local storage is per origin (per domain and protocol). All pages, from one origin, can store and access the same data.</p>
+                    <p>Mit Local Storage könne Webanwendungen local Daten im Browser des Benutzers speichern</p>
+                    <p>Vor HTML5 mussten Anwendungsdaten in Cookies gespeichert werden, die in jeder Serverabfrage drin waren.Localer Speciher ist sicherer und große Datenmengen können local gespeichert werden, ohne die Performence der Webseite zu beeinflussen</p>
+                    <p>im Gegensatz zu Cookies ist die Speichergrenze viel größer (mind.5MB) und Daten werden niemals an der Server übertragen.</p>
+                    
             </section>
             
             <section id="Support">
                 <h2>Browser Support</h2>
+                    <p> Die Zahlen in der Tabelle kennezeichnen die erste Browserversion, wo Local Storage voll unterstützt wird.</p>
                     <table>
 	          <thead>
 		          <tr>
@@ -75,15 +83,15 @@
             </section>
             <section id="Object-CheckSupport">
               
-                <h2>Local Storage Objekte </h2>
+                <h2>Local Storage Varianten </h2>
                 
-                <p>HTML local storage provides two objects for storing data on the client:</p>
+                <p>HTML local storage bietet 2 Varianten für die Speicherung von Daten auf dem Client an:</p>
         <ul id="supportbrowser">
-                <li>window.localStorage - stores data with no expiration date</li>
-                <li>window.sessionStorage - stores data for one session (data is lost when the browser tab is closed)</li>
+                <li>window.localStorage - speichert Daten ohne verfallsdatum</li>
+                <li>window.sessionStorage - speichert Daten für eine Sitzung(Daten gehen verloren, wenn die Registerkarte im Browser geschloßen                         wird)</li>
                 </ul> 
-                <p>Before using local storage, check browser support for localStorage and sessionStorage:</p>
-                <div class="code">
+                <p>Bevor man local storage anwenden kann , sollte man prüfen ob der Browser localstorage-fähig ist:</p><!--fähig strong machen
+        -->        <div class="code">
                 <div>   if(typeof(Storage) !== "undefined") { <br>
                    <i>  // Code for localStorage/sessionStorage.</i> <br>
                     } else {<br>
@@ -93,10 +101,10 @@
                 </div>
                 </section>
                 <section id="noExpiration">
-                    <h2>The localStorage Objekt</h2>
-                        <p>The localStorage object stores the data with no expiration date. The data will not be deleted when the browser is                                closed, and will be available the next day, week, or year.</p>
+                    <h2>The localStorage </h2>
+                        <p>Speichert die Daten ohne Ablaufsdatum.Die Daten werden nach dem Schließen des Browsers nicht gelöscht, sondern sind für den nächsten Tag , Woche oder Jahr wieder verfügbar.</p>
                     <div class="Exemple1">
-                        <h3>Beispiel</h3>
+                        <h4>Beispiel für localStorage:</h4>
                         <div class="Code store and retrieve">
                 
                       <i>  // Store </i> <br>
@@ -108,16 +116,16 @@
                             
                         </div>
                      
-	              <input href="google.de"type="try" value="Try it yourself!">
-             
+                      <blockquote> <footer> <a href="TryItYourself.html" name="try" >Live Demo</a>
+                      </footer>  </blockquote>
                     </div>
                         
-                    <p>Example explained :</p>
+                    <p>Beispiel erklärt :</p>
                         <ul id="explain">
-                            <li>Create a localStorage name/value pair with name="lastname" and value="Smith"</li>
-                            <li>Retrieve the value of "studiengang" and insert it into the element with id="result"</li>
+                            <li>Erstellt ein name/value Paar mit dem Name="studiengang" und dem Wert="Medieninformatik".</li>
+                            <li>ruft den Wert von "studiengang" auf , und fügt es in den Element mit dem id="result".</li>
                             </ul>
-                            <p>The example above could also be written like this:</p>
+                            <p>Das obere Beispiel könnte auch so aussehen:</p>
                             <div id="code"><i> // Store</i><br>
                             localStorage.studiengang = <span>"MedienInformatik</span>;<br>
                                 <i> // Retrieve</i><br>

@@ -1,70 +1,131 @@
 <!DOCTYPE html>
 <html lang="de">
-<header>
-     
 
-</header>
-<body>
-<head>
-    
-    <div class="Head">
-        Try it Yourself ! 
-    </div>
-</head>   
-<main>
-    <div id="Code">
-        <textarea  id="text"><!DOCTYPE html>
-            <html>
-                <body>
+    <head>
+        <meta charset="utf-8">
+		<title>Local Storage Tutorials</title>
 
-                    <div id="result"></div>
-
-                    <script>
-                        // Check browser support
-                        if (typeof(Storage) !== "undefined") {
-                            // Store
-                            localStorage.setItem("lastname", "Smith");
-                            // Retrieve
-                            document.getElementById("result").innerHTML = localStorage.getItem("lastname");
-                        } else {
-                            document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
-                        }
-                    </script>
-
-                </body>
-            </html></textarea>
-    
-    </div>
-    <div id="result">
-        <iframe framborder="0" id="result">
-        #document
-            <!DOCTYPE html>
-            <html>
-                <body>
-
-                    <div id="result"></div>
-
-                    <script>
-                        // Check browser support
-                        if (typeof(Storage) !== "undefined") {
-                            // Store
-                            localStorage.setItem("lastname", "Smith");
-                            // Retrieve
-                            document.getElementById("result").innerHTML = localStorage.getItem("lastname");
-                        } else {
-                            document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
-                        }
-                    </script>
-
-                </body>
-            </html>
-        </iframe>
+		<meta name="description" content="Projekt Local Storage">
+		<meta name="author" content="Issam Jourhbiri & Koray Güc">
+       <!-- Css Datei hinzufügen --> 
         
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="../Local-Storage-Projekt/Layout.css">
+        
+        
+</head>
+
+<body>
+<main>
+    <section><div id="eingabe">
+        <label>Name: </br>
+        <input type="text" id="name" placeholder="Name eingeben" value ></br>
+        </label>
+        <label>Studiengang: </br>
+            <input type="text" id="stdg" placeholder="Studiengang eingeben" value ></br>
+        </label>
+        <label>Matr-Nr : </br>
+            <input type="text" id="matrnr" placeholder="Matrikelnummer eingeben" value ></br>
+</label>
+    
+            <button name="Druck-mich" onclick="submit()">Speichern</button>
+<button name="remove" onclick="loeschen()">Loeschen</button></br>
+            <button name="reload-mich" onclick="reload()">Aufrufen</button>
     </div>
+</section>
+<section><div id="buttons">
+
+</div>
+  
+    
+<table>
+    <tbody>
+        <tr>
+            <td>Name :</td>
+            <td id="rslt1"></td>
+        </tr> </br>
+        <tr>
+            <td>Studiengang :</td> 
+            <td id="rslt2"></td>
+        </tr></br>
+        <tr>
+            <td>MatrikelNummer : </td>
+            <td id="rslt3"></td>
+        </tr>
+
+    </tbody> 
+</table>
+</section>
     
 </main>    
-<footer>
-</footer>
+    <script>        
+            function submit(){
+                
+                    var name = document.getElementById("name");
+                    var studien = document.getElementById("stdg");
+                    var matr = document.getElementById("matrnr");
+                    
+
+                        if (typeof(Storage) !== "undefined") {
+    
+                            localStorage.setItem("name", name.value);
+                            localStorage.setItem("studien", studien.value);
+                            localStorage.setItem("matr", matr.value);
+    
+                            document.getElementById("rslt1").innerHTML = localStorage.name;
+                            document.getElementById("rslt2").innerHTML = localStorage.studien;
+                            document.getElementById("rslt3").innerHTML = localStorage.matr;
+                            
+                        } else {
+                            document.getElementById("ausgabe").innerHTML = "Sorry, your browser does not support Web Storage...";
+                    }
+            }
+            function session(){
+                     var name = document.getElementById("name");
+                    var studien = document.getElementById("stdg");
+                    var matr = document.getElementById("matrnr");
+                    
+
+                        if (typeof(Storage) !== "undefined") {
+    
+                            sessionStorage.setItem("name", name.value);
+                             sessionStorage.setItem("studien", studien.value);
+                             sessionStorage.setItem("matr", matr.value);
+    
+                            document.getElementById("rslt1").innerHTML =  sessionStorage.name;
+                            document.getElementById("rslt2").innerHTML =  sessionStorage.studien;
+                            document.getElementById("rslt3").innerHTML =  sessionStorage.matr;
+                            
+                        } else {
+                            document.getElementById("ausgabe").innerHTML = "Sorry, your browser does not support Web Storage...";
+                    }
+                
+                     
+                  
+                
+                
+                
+                
+            }
+                function loeschen(){
+                  
+                          localStorage.clear();
+                            document.getElementById("rslt1").innerHTML = localStorage.name;
+                            document.getElementById("rslt2").innerHTML = localStorage.studien;
+                            document.getElementById("rslt3").innerHTML = localStorage.matr;
+                    
+                    
+                    
+                }
+            function reload() {
+                            
+                        
+                            document.getElementById("rslt1").innerHTML = localStorage.name;
+                            document.getElementById("rslt2").innerHTML = localStorage.studien;
+                            document.getElementById("rslt3").innerHTML = localStorage.matr;
+                            
+            }
+    </script>
    
 </body>
 </html>

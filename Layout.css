@@ -9,7 +9,7 @@
 .black{ 	#231f20; }
 .gray{ 		#fbfbfb; }
 
-h1,h2,h3,h4{
+h1,h2,h3 {
 	font-weight: 100;
 	font-size: 1.8rem;
 	line-height: 120%;
@@ -22,7 +22,9 @@ p {
 p + p{
 	margin-top: -1rem;
 }
+#noExpiration > div.Exemple1 > blockquote > footer > a{
 
+text-align:  right;}
 
 
 a:hover{
