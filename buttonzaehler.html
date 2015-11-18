@@ -1,1 +1,39 @@
+<!DOCTYPE html>
 
+<html lang="de">
+<header>
+    
+</header>
+
+<body>
+<head>
+<h1>Buttonzaehler</h1>
+    </head>
+    <main>
+        <button id="druck-mich" onclick="rechnen()">click </button>
+        <button id="loesch-mich" onclick="loeschen()">loschen </button>
+        <div id="result"></div>
+    </main>
+</body>
+
+<script>
+        function rechnen(){  
+            if (localStorage.clickcount) {
+                localStorage.clickcount = Number(localStorage.clickcount) + 1;
+                    } else {
+                        localStorage.clickcount = 1;
+                            }
+                                        document.getElementById("result").innerHTML = "You have clicked the button " +
+                                            localStorage.clickcount + " time(s).";    }
+    
+        function loeschen(){
+            
+            localStorage.clear();
+        }
+    
+    
+    </script>
+
+
+
+</html>
