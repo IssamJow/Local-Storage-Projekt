@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+
+    <head>
+        <meta charset="utf-8">
+		<title>Local Storage Tutorials</title>
+
+		<meta name="description" content="Projekt Local Storage">
+		<meta name="author" content="Issam Jourhbiri & Koray Güc">
+       <!-- Css Datei hinzufügen --> 
+        
+   
+        
+        
+</head>
+
+<body>
+    <main>
+        <section id="eingabe">
+            <div id="ein">
+            <label>Name: </br>
+                <input type="text" id="name" placeholder="Name eingeben" value ></br>
+            </label>
+            <label>Studiengang: </br>
+                <input type="text" id="stdg" placeholder="Studiengang eingeben" value ></br>
+            </label>
+            <label>Matr-Nr : </br>
+                <input type="text" id="matrnr" placeholder="Matrikelnummer eingeben" value ></br>
+            </label>
+    
+                <div id="buttons">
+                    <button name="Druck-mich" onclick="submit()">Speichern</button>
+                    
+                    <button name="reload-mich" onclick="reload()">Aufrufen</button>
+                </div>
+            </div>
+        </section>
+        <section id="ausgabe">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name :</td>
+                        <td id="rslt1"></td>
+                    </tr> </br>
+                    <tr>
+                        <td>Studiengang :</td> 
+                        <td id="rslt2"></td>
+                    </tr></br>
+                    <tr>
+                        <td>MatrikelNummer : </td>
+                        <td id="rslt3"></td>
+                    </tr>
+
+                </tbody> 
+            </table>
+        </section>
+    
+    </main>    
+    <script>        
+            function submit(){
+                
+                    var name = document.getElementById("name");
+                    var studien = document.getElementById("stdg");
+                    var matr = document.getElementById("matrnr");
+                    
+
+                        if (typeof(Storage) !== "undefined") {
+    
+                            sessionStorage.setItem("name", name.value);
+                            sessionStorage.setItem("studien", studien.value);
+                            sessionStorage.setItem("matr", matr.value);
+    
+                            document.getElementById("rslt1").innerHTML = sessionStorage.name;
+                            document.getElementById("rslt2").innerHTML = sessionStorage.studien;
+                            document.getElementById("rslt3").innerHTML = sessionStorage.matr;
+                            
+                        } else {
+                            document.getElementById("ausgabe").innerHTML = "Sorry, your browser does not support Web Storage...";
+                    }
+            }
+            
+ 
+            function reload() {
+                            
+                        if (typeof(Storage) !== null) {
+                             document.getElementById("rslt1").innerHTML = sessionStorage.name;
+                            document.getElementById("rslt2").innerHTML = sessionStorage.studien;
+                            document.getElementById("rslt3").innerHTML = sessionStorage.matr;
+                        } else {   
+                            alert("Kein LocalStorage vorhanden!");
+                             
+                          
+            } } 
+    </script>
+   
+</body>
+</html>
 

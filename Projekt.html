@@ -11,7 +11,7 @@
 		<meta name="description" content="Projekt Local Storage">
 		<meta name="author" content="Issam Jourhbiri & Koray Güc">
        <!-- Css Datei hinzufügen --> 
-         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+        
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="../Local-Storage-Projekt/Layout.css">
         
@@ -39,7 +39,7 @@
         <main>
             <section id="Definition">
                 <h2>Local Storage Definition</h2>
-                    <p>Mit Local Storage könne Webanwendungen local Daten im Browser des Benutzers speichern</p>
+                    <p>Mit Local Storage können Webanwendungen local Daten im Browser des Benutzers speichern</p>
                     <p>Vor HTML5 mussten Anwendungsdaten in Cookies gespeichert werden, die in jeder Serverabfrage drin waren.Localer Speciher ist sicherer und große Datenmengen können local gespeichert werden, ohne die Performence der Webseite zu beeinflussen</p>
                     <p>im Gegensatz zu Cookies ist die Speichergrenze viel größer (mind.5MB) und Daten werden niemals an der Server übertragen.</p>
                     
@@ -61,7 +61,7 @@
 			      </thead>
 			      <tbody>
 				      <tr>
-					      <td>Webstorage</td>
+					      <td>Version</td>
 					      <td>4.0</td>
 					      <td>8.0</td>
                           <td>3.5</td>
@@ -116,13 +116,13 @@
                             <li>Erstellt ein name/value Paar mit dem Name="studiengang" und dem Wert="Medieninformatik".</li>
                             <li>ruft den Wert von "studiengang" auf , und fügt es in den Element mit dem id="result".</li>
                             </ul>
-                            <p>Das obere Beispiel könnte auch so aussehen:</p>
+                            Das obere Beispiel könnte auch so aussehen:
                             <div id="code"><i> // Store</i><br>
                             localStorage.studiengang = <span>"MedienInformatik</span>;<br>
                                 <i> // Retrieve</i><br>
                                 document.getElementById(<span>"result"</span>).innerHTML = localStorage.studiengang;
                             </div>
-                            <a href="TryItYourself.html" name="try" >Live Demo</a>
+                            <a href="TryItYourself.html" name="try" >1.Live Demo</a>
                             <div id="remove">
                                 <p> The syntax for removing the "studiengang" localStorage item is as follows:</p>
                                 <div id="code2">   <i>  // Loescht bestimmte Items.</i> <br>                                                                                       localStorage.removeItem(<span>"studiengang"</span>);    
@@ -147,6 +147,7 @@
                         </div>
                           
                     </div>    
+                      <a href="buttonzaehler.html" name="try" >2.Live Demo</a>
             </section>
             <section id="SessionStorage">
                 <h2>The sessionStorage Objekt</h2>
@@ -159,7 +160,7 @@
                         <div class="Code store and retrieve">
                 
                       <i>  // Store </i> <br>
-                            sessionStorage.setItem(<span class="HighVAL"> "studiengang"</span> , <span class="HighVAL"> "MedienInformatik"</span>);<br>
+                            sessionStorage.setItem(<span class="HighVAL"> "studiengang"</span> , <span class="HighVAL"> "MedienInformatik"                                  </span>);<br>
                             <i>  // Retrieve </i><br>
                             document.getElementById(<span class="HighVAL" >"result"</span>).innerHTML = sessionStorage.getItem(<span                                                  class="HighVAL"> "studiengang"</span>);
                             
@@ -167,10 +168,10 @@
                             
                         </div>
                 
-                 <a href="TryItYourself.html" name="try" >Live Demo</a>
+                    <a href="TryItYourself2.html" name="try" >3.Live Demo</a>
                 
                 
-                
+                </div>
                 
                 
                 <div class="Exemple2">
@@ -185,28 +186,219 @@
                             sessionStorage.clickcount +<span class="HighVAL">" time(s) in this Session."</span>;
                     
                 
-                </div>
+                    </div>
                 
-                
+                 <a href="buttonzaehler2.html" name="try" >4.Live Demo</a>
             
             </div>
+                   
             
             </section>
                         
             
-            <!-- auf die W3s seite CSS Code beispiel anschaun
-
-            1-ziel von der Seite erklaren
-            2-mehr beispiele
-            3-implementierung sauber sein sollte
-            4-
-            
--->
-            
-            
-        
-        
+          <section id="sessvsloc">
+              <h3>LocalStorage vs SessionStorage</h3>
+              <p>Die folgende Tabelle zeigt die Unterschiede zwischen den beiden Arten des Local Storages:</p>
+                <table id="unterschied">
+                    <thead>
+                        <tr>
+                            <th>Storage-Arten</th>
+                            <th>Max. Größe</th>
+                            <th>Haltbarkeit</th>
+                            <th>Verfügbarkeit bei Fensterns/tabs</th>
+                            <th>Unterstützte Datentypen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>LocalStorage </td>
+                            <td>5MB pro App/Browser(kann vom Benutzer erhöht werden ,falls nötig).Nicht von allen Browsern unterstützt</td>
+                            <td>Gespeichert bis es vom Benutzer gelöscht wird(cache löschen)</td>
+                            <td>Verteilt auf allen Fenstern/Tabs eines einzelnen Browsers</td>
+                            <td>Nur String als "Key-value"-Paar</td>
+                        </tr>
+                        <tr>
+                            <td>SessionStorage </td>
+                            <td>Begrenzt auf Systemspeicher</td>
+                            <td>Hält an bis das zugehörige Fenster/Tab geschloßen wird</td>
+                            <td>Verfügbar nur innerhalb des Fensters/Tabs, von dem sie erstellt wurde</td>
+                            <td>Nur String als "Key-value"-Paar</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </section>
+                <section id="warum-localstorage">
+                    <h3>Warum nutzt man LocalStorage?</h3>
+                      <div id="problem">  
+                          <h4>Folgendes Problem wurde festgestellt :</h4>
+                            <p>Daten sollen clientseitig ohne Haltbarkeitsdatum gespeichert werden.</br>
+                            Dies können z.B. Daten sein, die den Nutzer ermöglichen auch offline zu arbeiten.Dabei soll kein Datenverlust                                        entstehen.
+                                </p>
+                        </div>
+                       <div id="lösung">
+                           <h4>Lösung:</h4>
+                            <p>Als bewährte Möglichkeit dienten bisher Cookies als Speicherung von Daten, die jedoch jedesmal von einem Server                                      aufgerufen werden müssen, und somit zum Offlinebetrieb sich nicht eignen.</br>
+                                 Seit HTML5 dient das localStorage-Objekt als native Speicherung direkt im Browser an.Dies bedeutet, das jeder                                      Browser auf dem Rechner des Nutzers seinen eigenen localStorage hat.</br>
+                                Da Cookies nach einer bestimmten Zeit ablaufen, was schnell zu Problemen führen kann, dient der localStorage als                                    beste Möglichkeit für den Offlinbetrieb.
+                                
+                            </p>
+                        </div>
+                </section>
+                <section id="Cookies">
+                    <div id="Definiton">
+                        <h2>Cookies Definition</h2>
+                        <p>Cookies sind Daten, die in kleinen Textdatein auf dem Computer gespeichert werden</p>
+                        <p>Sie erlauben einen Webserver auf dem PC des Anwenders Informationen zu hinterlegen.Da der Webserver nicht direkt auf                                 die Daten träger des Anwenders Zugriff hat, muss er hierfür den Browser nutzen</p>
+                        <p>Cookies wurden erzeugt um das Problem "wie erinnere ich mich an die Daten des Benutzers" zu lösen</p>
+                        <ul>
+                            <li>Wenn ein Benutzer ein Webseite besucht, sein Name wurde als Cookie gespeichert. </li>
+                            <li>Nächstes mal der Benutzer diese Webseite besucht, das Cookie "erinnert" sein name.</li>
+                        </ul>
+                    </div>
+                   
+                    <div id="code2">
+                        
+                        <i> //Cookies werden in Name-Wert Paar gespeichert:</i></br>
+                            username=John Doe
+                    </div>
+                    <p><strong>Note: </strong>Einzelne Cookies haben eine Max.Größe von ca. 4KB und können pro Domain nur 20 mal abgeschickt                        werden.</p>
+                    <div id=jscookies>
+                        Javascript kann mit dem Befehl <strong>document.cookie</strong> cookies erstellen, lesen & löschen.</br>
+                        Mit JavaScript kann ein Cookie wie folgt <strong>erstellt</strong> werden:
+                        <div id="code2">
+                        document.cookie=<span>"username=John Doe"</span>;
+                        </div>
+                        Das obere Beispiel könnte auch so aussehen:
+                        <div id="code2">
+                        document.cookie=<span>"username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC"</span>;
+                        </div>
+                        Hier wird der Zerfallsdatum des Cookies festgelegt. Ansonsten: Cookie wird nach Schließen des Browsers gelöscht.</br>
+                        Mit Javascript kann ein Cookie wie folgt <strong>gelesen</strong> werden:
+                        <div id="code2">
+                            var <span>x</span> = document.cookie;
+                        </div>
+                        Mit Javascript kann man ein Cookie genauso<strong> verändern</strong> wie man es erstellt hat:
+                        <div id="code2">
+                        document.cookie=<span>"username=John Smith; expires=Thu, 18 Dec 2013 12:00:00 UTC"</span>;
+                        </div>
+                        Und um ein Cookie zu <strong>löschen</strong>, kann man einfach ein Zerfallsdatum als Parameter eingeben:
+                        <div id="code2">
+                        document.cookie=<span>"username=; expires=Thu, 18 Dec 1993 12:00:00 UTC"</span>;
+                        </div>
+                    </div>
+                        
+                </section>
+                <section id="localstoragevscookies">
+              <div id="1.vergleich">
+                    <h2>LocalStorage vs Cookies </h2>
+                   <table id="unterschied">
+                    <thead>
+                        <tr>
+                            <th>Storage-Arten</th>
+                            <th>Max. Größe</th>
+                            <th>Anzahlsgrenze</th>
+                            <th>Wird es für jede Anfrage geschickt?</th>
+                            <th>Verfügbarkeit auf dem Server</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>LocalStorage </td>
+                            <td>5-10MB</td>
+                            <td>N/A</td>
+                            <td>Nein</td>
+                            <td>Nein</td>
+                        </tr>
+                        <tr>
+                            <td>SessionStorage </td>
+                            <td>4K</td>
+                            <td>20</td>
+                            <td>JA</td>
+                            <td>JA</td>
+                        </tr>
+                    </tbody>
+                </table>
+                  </div>
+                    <div id="Vorteile">
+                       <h3>Vorteile des Local Storage gegenüber Cookies</h3>
+                        <table>
+                        <thead>
+                            <tr>
+                                 <td><strong>LocalStorage </strong></td>
+                                <td><strong>Cookies </strong></td>
+                            </tr>
+                            </thead>
+                           <tbody>
+                               <tr>
+                                    <td>  
+                                        <li>Local Storage wird von fast allen modernen Browsern unterstützt</li>
+                                   </td>
+                                </tr>
+                           <tr>
+                               <td>
+                                   <li>Die Daten sind persistent und werden direkt im Browser abgespeichert</li>
+                                   
+                               </td>
+                               <td><li>Die Daten sind nur persistent</li></td>
+                            </tr>
+                            <tr>
+                               <td>
+                                   <li>wird <strong>nicht</strong> mit jeder HTTP-anfrage abgeschickt</li>
+                                </td>
+                                <td><li>Cookies müssen wegen ihre kleinen Größe jedesmal abgeschickt werden</li></td>
+                            </tr>
+                            <tr>
+                                <td>  
+                                    <li>Sind 5MB groß </li>
+                                </td>
+                                <td>
+                                    <li>Sind 0.04MB groß</li>
+                                </td>
+                               </tr>
+                                   
+                        
+                            
+                           </tbody>
+                           </table>
+                    </div>
+                    <div id="Nachteile">
+                        <h3>Nachteile des Local Storage gegenüber Cookies</h3>
+                        <table>
+                        <thead>
+                            <tr>
+                                 <td><strong>LocalStorage </strong></td>
+                                <td><strong>Cookies </strong></td>
+                            </tr>
+                            </thead>
+                           <tbody>
+                               <tr>
+                                    <td>  
+                                        <li>Erst ab einer bestimmten Versionsnummer des Browsers verfügbar</li>
+                                   </td>
+                                    <td>
+                                        <li>Wird von jede einzelne Browser unterstützt</li>
+                                    </td>
+                                </tr>
+                           <tr>
+                               <td>
+                                   <li>Kein Zerfallsdatum</li>
+                                   
+                               </td>
+                               <td><li>Besitz Zerfallsdatum(Datenschutz)</li></td>
+                            </tr>
+                            <tr>
+                               <td>
+                                   <li>wenn Server gespeichert Clientinformation benötigt , ist man "gezwungen" sie zu senden.</li>
+                                </td>
+                                <td><li>Können jeder Zeit gelöscht werden </li></td>
+                            </tr>
+                           </tbody>
+                           </table>
+                    </div>
+                    
+                </section>
         </main>
+     
         </body>
     
     
