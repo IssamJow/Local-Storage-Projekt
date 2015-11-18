@@ -11,12 +11,12 @@
 		<meta name="description" content="Projekt Local Storage">
 		<meta name="author" content="Issam Jourhbiri & Koray Güc">
        <!-- Css Datei hinzufügen --> 
-        
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="../Local-Storage-Projekt/Layout.css">
         
         
-</head> <!-- Grosse headline "Local Storage Tutorials 2- noch eine NAvi erstellen mit checksupport 3-trennungborders auf grun 4 buttons im pink-->
+</head> 
         <body>
             <header>
                 <div class="Th-logo">
@@ -26,24 +26,15 @@
                     <img src="../Local-Storage-Projekt/Src/assets/img/mi-box-100.png" alt="mi-box-100" width="100" height="83">
                     <h1>Medieninformatik<br>an der TH Köln</h1>
                 </div>
-                <div> HTML LocalStorage Tutorial</div>
+                <div id="seite-definition"> HTML LocalStorage Tutorial</div>
                         <p>Mit diesem Tutorial soll gezeigt werden, wie Local Storage überhaupt funktioniert und angewendet wird.</br>
                         Außerdem werden die Varianten des Local Storage von einander unterschieden und in praktischen Beispielen demonstiert.</br>
                     Zu guter Letzt werden die Vorteile geneüber Cookies dargestellt und gezeigt , wieso Local Storage eine bessere Anwendung für                         Webstorage ist.</p>
+                </div>
                 
                 
                 
-                
-                <nav>
-                    <ul id="nav">
-                        <li><a href="#definition" title="Definition">LocalStorage Definition</a></li>
-                        <li><a href="#checkbrowsersupprt" title="BrowserSupport"> Browser Support</a></li>
-                        <li><a href="#local-storage-object" title="Local-Storage-Object">LocalStorage-Object</a></li>
-                        <li><a href="#session-storage-object" title="Session-Storage-Object">SessionStorage-Object</a></li>
-                        <li><a href="#cookies" title="Cookies">Cookies</a></li>
-     
-                    </ul>
-                </nav>
+               
             </header>
         <main>
             <section id="Definition">
@@ -116,8 +107,8 @@
                             
                         </div>
                      
-                      <blockquote> <footer> <a href="TryItYourself.html" name="try" >Live Demo</a>
-                      </footer>  </blockquote>
+                   
+                    
                     </div>
                         
                     <p>Beispiel erklärt :</p>
@@ -131,12 +122,16 @@
                                 <i> // Retrieve</i><br>
                                 document.getElementById(<span>"result"</span>).innerHTML = localStorage.studiengang;
                             </div>
+                            <a href="TryItYourself.html" name="try" >Live Demo</a>
                             <div id="remove">
                                 <p> The syntax for removing the "studiengang" localStorage item is as follows:</p>
-                                <div id="code2">localStorage.removeItem(<span>"studiengang"</span>);
+                                <div id="code2">   <i>  // Loescht bestimmte Items.</i> <br>                                                                                       localStorage.removeItem(<span>"studiengang"</span>);    
+                                </div>
+                                <p>Oder alle .... </p>
+                                <div id="code2"> <i>  // Loescht alle Items des localStorage.</i> <br>
+                                    localStorage.clear();
                                 </div>
                             </div>
-                    <p><strong>Note:</strong>Name/value pairs are always stored as strings. Remember to convert them to another format when                              needed!</p>
                     <p>The following example counts the number of times a user has clicked a button. In this code the value string is converted                             to a number to be able to increase the counter:    
                     </p>
                     <div class="Exemple2">
@@ -150,7 +145,7 @@
                                 document.getElementById(<span class="HighVAL">"result"</span>).innerHTML = <span class="HighVAL">"You have                                          clicked the button " </span>+ <br>
                             localStorage.clickcount +<span class="HighVAL">" time(s)."</span>;
                         </div>
-                          <input href="google.de"type="try" value="Try it yourself!"> 
+                          
                     </div>    
             </section>
             <section id="SessionStorage">
@@ -158,7 +153,27 @@
                 <p>The sessionStorage object is equal to the localStorage object, except that it stores the data for only one session. The data                         is deleted when the user closes the specific browser tab.</p>
                 <p>The following example counts the number of times a user has clicked a button, in the current session:
                             </p>
-                <div class="Exemple3">
+               
+                <div class="Exemple1">
+                        <h4>Beispiel für sessionStorage:</h4>
+                        <div class="Code store and retrieve">
+                
+                      <i>  // Store </i> <br>
+                            sessionStorage.setItem(<span class="HighVAL"> "studiengang"</span> , <span class="HighVAL"> "MedienInformatik"</span>);<br>
+                            <i>  // Retrieve </i><br>
+                            document.getElementById(<span class="HighVAL" >"result"</span>).innerHTML = sessionStorage.getItem(<span                                                  class="HighVAL"> "studiengang"</span>);
+                            
+                           
+                            
+                        </div>
+                
+                 <a href="TryItYourself.html" name="try" >Live Demo</a>
+                
+                
+                
+                
+                
+                <div class="Exemple2">
                 <h3>Beispiel</h3>
                     <div class="code count">
                     <span class="anw">    if </span> (sessionStorage.clickcount) { <br>
@@ -172,7 +187,7 @@
                 
                 </div>
                 
-                <input href="google.de"type="try" value="Try it yourself!">
+                
             
             </div>
             

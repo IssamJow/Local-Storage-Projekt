@@ -9,6 +9,11 @@
 .black{ 	#231f20; }
 .gray{ 		#fbfbfb; }
 
+*, footer{
+	line-height: 140%;
+	font-family: 'Open Sans', sans-serif !important;
+}
+
 h1,h2,h3 {
 	font-weight: 100;
 	font-size: 1.8rem;
@@ -157,7 +162,7 @@ input[type=try]:hover{
     #Styles - code background
 \*------------------------------------*/
 
-#Object-CheckSupport > div > div  ,#noExpiration > div.Exemple1 > div , #code
+#Object-CheckSupport > div > div  ,#noExpiration > div.Exemple1 > div , #code ,#SessionStorage > div > div.Code.store.and.retrieve
 {
  
 background-color: rgb(255, 255, 255);
@@ -194,6 +199,75 @@ padding-left: 12px;
 padding-right: 12px;
 padding-top: 8px;
 }
+#code2{
+background-color: rgb(255, 255, 255);
+border-bottom-color:#231f20 ;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-image-outset: 0px;
+border-image-repeat: stretch;
+border-image-slice: 100%;
+border-image-source: none;
+border-image-width: 1;
+border-left-color:#9313c3 ;
+border-left-style: solid;
+border-left-width: 4px;
+border-right-color: #231f20;
+border-right-style: solid;
+border-right-width: 1px;
+border-top-color:#231f20 ;
+border-top-style: solid;
+border-top-width: 1px;
+box-sizing: border-box;
+color: rgb(0, 0, 0);
+display: block;
+font-family: Consolas, 'courier new';
+font-size: 16px;
+height: 65px;
+line-height: 22.4px;
+margin-bottom: 20px;
+margin-left: 0px;
+margin-right: 0px;
+margin-top: 20px;
+padding-bottom: 8px;
+padding-left: 12px;
+padding-right: 12px;
+padding-top: 8px;}
+#SessionStorage > div > div.Exemple2 > div ,#noExpiration > div.Exemple2 > div
+{
+background-color: rgb(255, 255, 255);
+border-bottom-color:#231f20 ;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-image-outset: 0px;
+border-image-repeat: stretch;
+border-image-slice: 100%;
+border-image-source: none;
+border-image-width: 1;
+border-left-color:#9313c3 ;
+border-left-style: solid;
+border-left-width: 4px;
+border-right-color: #231f20;
+border-right-style: solid;
+border-right-width: 1px;
+border-top-color:#231f20 ;
+border-top-style: solid;
+border-top-width: 1px;
+box-sizing: border-box;
+color: rgb(0, 0, 0);
+display: block;
+font-family: Consolas, 'courier new';
+font-size: 16px;
+height: 195px;
+line-height: 22.4px;
+margin-bottom: 20px;
+margin-left: 0px;
+margin-right: 0px;
+margin-top: 20px;
+padding-bottom: 8px;
+padding-left: 12px;
+padding-right: 12px;
+padding-top: 8px;}
 
 
 
