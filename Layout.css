@@ -244,3 +244,4 @@ padding-top: 8px;}
 #SessionStorage > div.Exemple2 > h3,#remove > p:nth-child(1){padding-top: 2rem;}
 span{color: blue;}
 #Support > table > thead > tr > th:nth-child(3) > img {padding-left: 2.3rem;}
+#Support > table > tbody > tr > td:nth-child(3) {padding-left:5.5rem;}
