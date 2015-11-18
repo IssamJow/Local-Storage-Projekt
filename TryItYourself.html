@@ -106,7 +106,7 @@
                 }
             function reload() {
                             
-                        if (typeof(Storage) !== null) {
+                        if (localStorage.name !== undefined) {
                              document.getElementById("rslt1").innerHTML = localStorage.name;
                             document.getElementById("rslt2").innerHTML = localStorage.studien;
                             document.getElementById("rslt3").innerHTML = localStorage.matr;
