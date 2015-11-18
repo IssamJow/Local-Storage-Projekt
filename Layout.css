@@ -18,7 +18,8 @@ h1,h2,h3 {
 	font-weight: 100;
 	font-size: 1.8rem;
 	line-height: 120%;
-	margin-bottom: 1.8rem;
+	margin-bottom: 1.5rem;
+    margin-top: -0.5rem;
 }
 p {
 	margin-bottom: 2rem;
@@ -124,6 +125,7 @@ table td + td,table th + th {
 #unterschied > thead > tr > th{
     font-weight: bold;
 }
+
 
 
 
@@ -245,3 +247,5 @@ padding-top: 8px;}
 span{color: blue;}
 #Support > table > thead > tr > th:nth-child(3) > img {padding-left: 2.3rem;}
 #Support > table > tbody > tr > td:nth-child(3) {padding-left:5.5rem;}
+/*ziel auf dem Header styles*/
+body > header > p {text-align: center;padding-left: 3rem;padding-right: 3rem;}
