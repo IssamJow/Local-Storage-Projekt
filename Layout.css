@@ -9,7 +9,7 @@
 .black{ 	#231f20; }
 .gray{ 		#fbfbfb; }
 
-*, footer{
+body{
 	line-height: 140%;
 	font-family: 'Open Sans', sans-serif !important;
 }

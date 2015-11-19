@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8">
-		<title>Local Storage Tutorials</title>
+		<title>SessionStorage Beispiel</title>
 
 		<meta name="description" content="Projekt Local Storage">
 		<meta name="author" content="Issam Jourhbiri & Koray Güc">
@@ -95,12 +95,12 @@
  
             function reload() {
                             
-                        if (typeof(Storage) !== null) {
+                       if (sessionStorage.name !== undefined) {
                              document.getElementById("rslt1").innerHTML = sessionStorage.name;
                             document.getElementById("rslt2").innerHTML = sessionStorage.studien;
                             document.getElementById("rslt3").innerHTML = sessionStorage.matr;
                         } else {   
-                            alert("Kein LocalStorage vorhanden!");
+                            alert("Kein Storage vorhanden!");
                              
                           
             } } 
