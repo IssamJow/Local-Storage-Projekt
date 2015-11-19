@@ -1,2 +1,2 @@
 # Local-Storage-Projekt
-This is the Readme file for our projekt-Local Storage!
+Ein Projekt der TH-Köln, das ein Tutorial für Local Storage behandelt.
